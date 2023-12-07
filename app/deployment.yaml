@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pholsoophak-resturanproject-final-demo-deployment
+  labels:
+    app: pholsoophak-resturanproject-final-demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pholsoophak-resturanproject-final-demo
+  template:
+    metadata:
+      labels:
+        app: pholsoophak-resturanproject-final-demo
+    spec:
+      containers:
+        - name: pholsoophak-resturanproject-final-demo
+          image: kshrdautopilot/pholsoophak-resturanproject-final-demo
+          ports:
+            - containerPort: 3000
