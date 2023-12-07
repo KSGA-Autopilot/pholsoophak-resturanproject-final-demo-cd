@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: pholsoophak-resturanproject-final-demo
-          image: kshrdautopilot/pholsoophak-resturanproject-final-demo
+          image: kshrdautopilot/pholsoophak-resturanproject-final-demo:2023-12-07-02-06-08
           ports:
             - containerPort: 3000
