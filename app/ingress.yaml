@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: pholsoophak-resturanproject-final-demo-ingress
+  namespace: pholsoophak
+spec:
+  tls:
+    - hosts:
+        - demo.auto-pilot.dev
+      secretName: demo-auto-pilot-dev-cert
+  rules:
+    - host: demo.auto-pilot.dev
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: pholsoophak-resturanproject-final-demo-svc
+                port:
+                  number: 3000
